@@ -78,6 +78,12 @@ public class CustomTime {
 
     // increment the current time by one second
     void incrementTime() {
-        ++second;
+        second=++second%(Max_Min_sec+1);
+        if(second==0){
+            minute=++minute%(Max_Min_sec+1);
+        }
+        if(second==0 && minute==0){
+            hour=++hour%(Max_Hour+1);
+        }
     }
 }
