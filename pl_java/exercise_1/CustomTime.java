@@ -1,5 +1,7 @@
 package pl_java.exercise_1;
 
+import java.time.LocalTime;
+
 public class CustomTime {
 
     final static int Max_Hour=23;
@@ -14,9 +16,10 @@ public class CustomTime {
     // default constructor
 
     public CustomTime(){
-        hour=0;
-        minute=0;
-        second=0;
+        LocalTime time = LocalTime.now();
+        hour=time.getHour();
+        minute=time.getMinute();
+        second=time.getSecond();
     }
 
     // parameterized constructor
