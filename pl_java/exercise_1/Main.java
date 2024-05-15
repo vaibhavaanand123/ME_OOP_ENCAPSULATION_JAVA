@@ -2,8 +2,7 @@ package pl_java.exercise_1;
 
 public class Main {
     public static void main(String args[]) {
-        CustomTime cTime = new CustomTime();
-        cTime.setHour(21);
+        CustomTime cTime = new CustomTime(51,0,0);
         printTime(cTime.getTime());
     }
 
